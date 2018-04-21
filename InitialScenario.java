@@ -3,10 +3,10 @@ import java.io.FileReader;
 
 public class InitialScenario {
 
-    public String getInitialScenario(int chosenScenario)
+    public static String getInitialScenario(int chosenScenario)
     {
     	 String fileName = "/resources/initialscenario" + chosenScenario.toString(); 
-    	 BufferedReader br = new BufferedReader(new FileReader("fileName"));	 
+    	 BufferedReader br = new BufferedReader(new FileReader(fileName));	 
      StringBuilder sb = new StringBuilder();
      String line = br.readLine();
 

@@ -3,7 +3,7 @@ public class Questions {
 	public static String getQuestions(int chosenScenario)
 	{
 	  String[] setOfQuestions = new String[9]; 	
-	  String fileName = "/resources/finalscenario" + chosenScenario.toString(); 
+	  String fileName = "/resources/questions" + chosenScenario.toString(); 
    	  BufferedReader br = new BufferedReader(new FileReader(fileName));	 
       int count = 0;
       String line = br.readLine();
@@ -22,7 +22,7 @@ public class Questions {
 	public static String getAnswers(int chosenScenario)
 	{
 	  String[] setOfAnswers = new String[9]; 	
-	  String fileName = "/resources/finalscenario" + chosenScenario.toString(); 
+	  String fileName = "/resources/questions" + chosenScenario.toString(); 
    	  BufferedReader br = new BufferedReader(new FileReader(fileName));	 
       int count = 0;
       String line = br.readLine();
@@ -36,5 +36,19 @@ public class Questions {
          line = br.readLine();
        }
          return setOfAnswers;  	
+	}
+	
+	public static String getKeyword(int chosenScenario)
+	{
+	  String lastLine = new String(); 	
+	  String fileName = "/resources/questions" + chosenScenario.toString(); 
+   	  BufferedReader br = new BufferedReader(new FileReader(fileName));	 
+      String line = br.readLine();
+
+       while (line != null) {
+    	     lastLine = line;
+         line = br.readLine();
+       }
+         return lastLine;  	
 	}
 }

@@ -12,7 +12,7 @@ public class Game {
 		// show user the initial scenario - fe
 		
 		String []questions = Questions.getQuestions(chosenScenario);
-		String []answers = Answers.getAnswers(chosenScenario);
+		String []answers = Questions.getAnswers(chosenScenario);
 		
 		// show all questions to user with checkboxes - fe
 		boolean selectedQuestions = new boolean[9];

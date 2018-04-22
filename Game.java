@@ -1,13 +1,18 @@
+package game;
+
+import java.io.IOException;
+
 public class Game {
 
-	int NoOfScenarios = 1;
-	int chosenScenario;
+	/*
 	
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
 		// make user choose a scenario and save in chosenScenario - fe
-		
-		String initialScenarioAsString = InitialScenerio.getInitialScenario(chosenScenario);
+		int NoOfScenarios = 3;
+	        int chosenScenario;
+                
+		String initialScenarioAsString = InitialScenario.getInitialScenario(chosenScenario);
 		 
 		// show user the initial scenario - fe
 		
@@ -67,5 +72,6 @@ public class Game {
 		}
 		else 
 			//tell user lost - fe
-	}
+	}*/
 }
+

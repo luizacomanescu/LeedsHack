@@ -1,11 +1,24 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package game;
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 
+
+/**
+ *
+ * @author luizacomanescu
+ */
 public class FinalScenario {
 
-    public String getFinalScenario(int chosenScenario)
+    public static String getFinalScenario(int chosenScenario) throws FileNotFoundException, IOException
     {
-    	 String fileName = "/resources/finalscenario" + chosenScenario.toString(); 
+    	 String fileName = "/Users/luizacomanescu/NetBeansProjects/Game/src/game/finalscenario" + String.valueOf(chosenScenario) + ".txt"; 
     	 BufferedReader br = new BufferedReader(new FileReader(fileName));	 
      StringBuilder sb = new StringBuilder();
      String line = br.readLine();
@@ -18,9 +31,9 @@ public class FinalScenario {
           return sb.toString();  
      }
     
-    public String getFinalScenarioEncrypted(int chosenScenario)
+    public static String getFinalScenarioEncrypted(int chosenScenario) throws FileNotFoundException, IOException
     {
-    	 String fileName = "/resources/finalScenarioEncrypted" + chosenScenario.toString(); 
+    	 String fileName = "/Users/luizacomanescu/NetBeansProjects/Game/src/game/finalScenarioEncrypted" + String.valueOf(chosenScenario) + ".txt"; 
     	 BufferedReader br = new BufferedReader(new FileReader(fileName));	 
      StringBuilder sb = new StringBuilder();
      String line = br.readLine();
@@ -33,4 +46,5 @@ public class FinalScenario {
           return sb.toString();  
      }
 }
+
 
